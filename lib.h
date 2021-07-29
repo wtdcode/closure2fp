@@ -9,8 +9,14 @@ typedef void (*callback_t2)();
 extern "C" {
 #endif
 
+/*
+    Well-designed callback API.
+*/
 void register_callback(callback_t callback, void* data);
 
+/*
+    Bad-designed callback API.
+*/
 void register_callback2(callback_t2 callback);
 
 #ifdef __cplusplus
