@@ -31,8 +31,10 @@ Closure* closure_dealloc(Closure*);
 
 /*
     Cast a closure to a raw pointer to function.
+
+    NOTE: Since this is a demo so we support the fixed function pointer type.
 */
-callback_t2 closure_to_pointer(Closure*);
+callback_bad_t closure_to_pointer(Closure*);
 
 #ifdef __cplusplus
 }

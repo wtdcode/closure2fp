@@ -32,7 +32,7 @@ void register_callback_wrapper(callback_fn callback) {
 
     closure_prepare(closure, [](void* data){ (*(CallbackManager*)data)();}, mgr);
     // NOTE: We are passing a closure to a raw function pointer.
-    register_callback2(closure_to_pointer(closure));
+    register_callback_bad(closure_to_pointer(closure));
 }
 
 typedef struct Context {

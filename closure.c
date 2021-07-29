@@ -8,7 +8,7 @@
 typedef struct Closure {
     unsigned index; // Fast to dealloc.
     int is_free; // Whether in use.
-    callback_t2 code; // Actual code entry point.
+    callback_bad_t code; // Actual code entry point.
     callback_t callback; // User supplied callback.
     void* data; // User supplied data.
 } Closure;
@@ -81,6 +81,6 @@ Closure* closure_dealloc(Closure* closure) {
     closures[closure->index].is_free = 1;
 }
 
-callback_t2 closure_to_pointer(Closure* closure) {
+callback_bad_t closure_to_pointer(Closure* closure) {
     return closure->code;
 }

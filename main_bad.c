@@ -26,7 +26,7 @@ int main(){
     // some operation
 
     // NOTE: We are passing a closure to a raw function pointer.
-    register_callback2(closure_to_pointer(closure));
+    register_callback_bad(closure_to_pointer(closure));
 
     // other operation
 

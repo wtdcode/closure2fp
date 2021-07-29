@@ -3,7 +3,7 @@
 
 typedef void (*callback_t)(void* data);
 
-typedef void (*callback_t2)();
+typedef void (*callback_bad_t)();
 
 #ifdef __cplusplus
 extern "C" {
@@ -17,7 +17,7 @@ void register_callback(callback_t callback, void* data);
 /*
     Bad-designed callback API.
 */
-void register_callback2(callback_t2 callback);
+void register_callback_bad(callback_bad_t callback);
 
 #ifdef __cplusplus
 }
