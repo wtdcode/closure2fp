@@ -30,6 +30,8 @@ void tramp_table_init() {
     void* addr;
     uint64_t tramp_addr;
 
+    // No error handling for simplicity.
+
     // Map TRAMP_LEN * 2 memory, a half for code and the other half for data.
     addr = mmap(NULL, TRAMP_LEN * 2, PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS, -1 ,0);
     // Replace the half of the tramp memory with our code.
